@@ -2,7 +2,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import user from '../img/user.webp'
-import like from '../img/like.png'
 import cmt from '../img/comment.png'
 import post from '../img/post.png'
 import save from '../img/save.png'
@@ -114,7 +113,6 @@ function SingleBoard() {
                             </PostContent>
                             <PostCommentContainer>
                                 <PostCommentButton>
-                                    <img src={like} alt="좋아요" />
                                     <img src={cmt} alt="댓글 보기" onClick={showPostModal} />
                                     <img src={post} alt="공유" />
                                     <img src={save} alt="저장" />
