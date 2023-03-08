@@ -1,0 +1,22 @@
+:root{
+    --bg-color:white;
+    --font-color:rgb(0, 0, 0);
+    --btncolor:rgb(255, 255, 255);
+    --border:#d4d4d4;
+    --btnfont:white;
+}
+
+html.dark {
+    background:#000000;
+    --font-color:#ffffff;
+    --btncolor:rgb(0, 0, 0);
+    --border:#313131;
+    --btnfont:black;
+}
+
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+
