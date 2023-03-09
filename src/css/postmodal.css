@@ -1,0 +1,110 @@
+.modal-container{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+}
+.close-modal{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+.modal{
+    background-color: #fff;
+    width: 1000px;
+    height: 800px;
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+}
+
+
+.modal-image{
+    width: 600px;
+    height: 800px;
+    object-fit: cover;
+}
+.modal-content-section{
+    width: 100%;
+    font-size: 14px;
+}
+.modal-top-section{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    border-bottom:  1px solid rgb(220,220,220);
+}
+
+.modal-section{
+   
+    padding: 15px;
+    
+    border-bottom:  1px solid rgb(220,220,220);
+}
+/* .modal-top-section img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+} */
+.dot-image{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.profile-image{
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.username{
+    font-weight: 600;
+    cursor: pointer;
+}
+.modal-comment-section{
+    height: 590px;
+    overflow-y: scroll;
+}
+.detail-actions{
+    display: flex;
+}
+.detail-actions img{
+    min-width: 22px;
+    min-height: 22px;
+    max-width: 22px;
+    max-height: 22px;
+    margin-left: 20px;
+}
+.write-section{
+    display: flex;
+    color: rgb(150,150,150);
+    flex: 1;
+    align-items: center;
+}
+.write-section textarea{
+    width: 80%;
+    height: 100%;
+    resize: none;
+    text-decoration: none;
+}
+.spacer{
+    flex:1
+}
+.dot{
+    cursor: pointer;
+}
