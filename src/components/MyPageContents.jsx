@@ -4,6 +4,8 @@ import profile from '../img/profile.png';
 import { IoMdSettings } from "react-icons/io";
 import Sidebar from "../components/Sidebar";
 import { BiCamera } from "react-icons/bi";
+import { ImPriceTag } from "react-icons/im";
+
 
 const MyPageContents = () => {
     const [tab, setTab] = useState(0);
@@ -27,7 +29,12 @@ const MyPageContents = () => {
                 <Li> 저장됨 </Li>
             ),
             content:(
-                <div></div>
+                <Con1>
+                    <ImPriceTag size="50"/>
+                    <H3>게시물 저장</H3>
+                    <Ment>게시글을 저장하면 여기에 표시됩니다.</Ment>
+                    <ShareBtn>저장된 게시글 보기</ShareBtn>
+                </Con1>
             )
         },
         {
@@ -35,7 +42,12 @@ const MyPageContents = () => {
                 <Li> 태그됨 </Li>
             ),
             content:(
-                <div></div>
+                <Con1>
+                    <BiCamera size="50"/>
+                    <H3>내가 나온 사진</H3>
+                    <Ment>사진을 공유하면 프로필에 표시됩니다.</Ment>
+                    <ShareBtn>공유된 사진 보기</ShareBtn>
+                </Con1>
             )
         }
     ];
@@ -154,7 +166,7 @@ const P3 = styled.p`
 
 const Contents = styled.div`
     position:relative;
-    top:0; 
+    top:-95px; left:150px;
     width:80%;
     display: flex;
     flex-direction: row;
@@ -170,7 +182,6 @@ const Contents = styled.div`
           padding-left:15px;
           margin-right:50px;
           font-size: 17px;
-
         }
 
         .focused {
@@ -183,7 +194,6 @@ const Contents = styled.div`
          
            & div.desc {
              width:100px;
-             background:red;
              text-align: center;
            }
 `
@@ -198,12 +208,13 @@ const Li = styled.li `
 
 const Con1 = styled.div `
     position:relative;
-    top:200px;
-    width:100%;
+    top:300px; right:310px;
+    width:80%;
     display:flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    
 `
 
 const H3 = styled.h3 `

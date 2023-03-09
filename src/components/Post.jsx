@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import user from '../img/user.webp'
-import like from '../img/like.png'
 import cmt from '../img/comment.png'
 import post from '../img/post.png'
 import save from '../img/save.png'

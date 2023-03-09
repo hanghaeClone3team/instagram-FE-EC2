@@ -1,41 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
 import styled from 'styled-components';
 
-class LikeCount extends React.Component{
-  state = {
-      isChecked: false,
-      notice: ' ',
+const LikeCountAction = () => {
+    const [isChecked, setIsChecked] = useState(false);
+    const [notice, setNotice] = useState('');
+  
+    const onClick = () => 
+        isChecked
+          ? (setIsChecked(false), setNotice(''))
+          : (setIsChecked(true), setNotice('좋아요 1회'));
+  
+    return (
+      <React.Fragment>
+        <Wrap>
+          {isChecked ?  
+          <AiFillHeart size="30" color="red" onClick={onClick}/> :
+          <AiOutlineHeart size="30" onClick={onClick}/>}
+          <P>{notice}</P>
+        </Wrap>
+      </React.Fragment> 
+    );
   };
 
-  onClick = () => {
-      this.state.isChecked ?
-      this.setState({
-          isChecked: false,
-          notice: '',
-      })
-      :
-      this.setState({
-          isChecked: true,
-          notice: '좋아요 1회',
-      });
-  }
-  render(){
-      return(
-          <React.Fragment>
-              <Wrap>
-                  {this.state.isChecked ?  
-                  <AiFillHeart size="30" color="red" onClick={this.onClick}/> :
-                  <AiOutlineHeart size="30" onClick={this.onClick}/>}
-                  <P>{this.state.notice}</P>
-              </Wrap>
-          </React.Fragment> 
-      )
-  }
-}
-
-export default LikeCount
+export default LikeCountAction
 
 const Wrap = styled.div `
   position:relative;

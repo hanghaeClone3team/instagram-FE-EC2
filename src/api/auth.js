@@ -20,8 +20,8 @@ const usernameCheck = async({ username }) => {
     return response;
 }
 
-const likebtnClickUser = async({ username }) => {
-    const response = await instance.post(`/api/post/{id}`, { username });
+const likebtnClickUser = async({ id, contentHeart }) => {
+    const response = await instance.post(`/api/post/${id}`, { contentHeart });
     console.log(response);
     return response;
 }

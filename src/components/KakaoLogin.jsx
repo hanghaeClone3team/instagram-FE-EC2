@@ -5,7 +5,7 @@ import { SiKakaotalk } from "react-icons/si";
 
 const  KakaoLogin = () => {
     const REST_API_KEY = "ddc603749d78abff3f309e771a37719f";
-    const REDIRECT_URI = "http://localhost:3000/board";
+    const REDIRECT_URI = "http://localhost:3000/weblogin";
     const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
     const KakaoLoginHandler = () => {
         window.location.href = KAKAO_AUTH_URL;
@@ -16,10 +16,10 @@ const  KakaoLogin = () => {
     const IP = "http://localhost:3000"
 
     const getKakaoToken = () => {
-      fetch(`https://kauth.kakao.com/oauth/token`,{
+      fetch(`https://kauth.kakao.com/weblogin/token`,{
         method: 'POST',
         headers: { 'Content-type' : 'application/x-www-form-urlencoded;charset=utf-8'},
-        body : `grant_type=authorization_code&client_id=${REST_API_KEY}&redirect_url=${REDIRECT_URI}&code=${KAKAO_CODE}`,
+        body : `grant_type=authorization_code&client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&code=${KAKAO_CODE}`,
       })
       .then(res=>res.json())
       .then(data=>{
@@ -44,7 +44,6 @@ const  KakaoLogin = () => {
       .then(res => res.json())
       .then(data => {
         localStorage.setItem('token', data.token);
-        // navigate('/board');
       });
     }, []);
 
